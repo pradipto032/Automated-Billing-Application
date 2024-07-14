@@ -1,0 +1,50 @@
+<table class="table align-middle mb-0 bg-white">
+  <thead class="bg-light">
+    <tr>
+      <th>Name & Phone & GmailId</th>
+      <th>Shipping Address</th>
+      <th>Billing Address</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody *ngFor = "let a of cust">
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <div class="ms-3">
+            <p class="fw-bold mb-1">{{a.custName}}</p>
+            <p class="text-muted mb-0">{{a.custPhone}}</p>
+            <p class="fw-normal mb-1">{{a.custMail}}</p>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="d-flex align-items-center">
+          <div class="ms-3">
+            <p class="fw-bold mb-1">{{a.custShippingAddress.address}}</p>
+            <p class="text-muted mb-0">{{a.custShippingAddress.state}}</p>
+            <p class="fw-normal mb-1">{{a.custShippingAddress.pinCode}}</p>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="d-flex align-items-center">
+          <div class="ms-3">
+            <p class="fw-bold mb-1">{{a.custBillingAddress.address}}</p>
+            <p class="text-muted mb-0">{{a.custBillingAddress.state}}</p>
+            <p class="fw-normal mb-1">{{a.custBillingAddress.pinCode}}</p>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="d-flex align-items-center">
+          <div class="ms-3">
+            <p class="fw-bold mb-1">update</p>
+            <span><p class="text-muted mb-0">delete</p></span>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button type="button" class="btn btn-lg btn-primary">Add Customer</button>
